@@ -19,18 +19,7 @@ export class DadosDoAlunoPage {
 	disciplinas: any;
 	info: any;
 
-	eventSource = [];
-	viewTitle: string;
-
-	selectedDay = new Date();
-
-	calendar = {
-		mode: 'month',
-		currentDate: this.selectedDay,
-	}
-
 	constructor(public navCtrl: NavController, public navParams: NavParams) {
-
 		this.info = {
 			disciplina: "Matemática",
 			rendimento: [
@@ -65,17 +54,5 @@ export class DadosDoAlunoPage {
 	isGroupShown(group) {
 		return this.shownGroup === group;
 	};
-
-	onViewTitleChanged(title) {
-		this.viewTitle = title;
-	}
-
-	onTimeSelected(event) {
-
-	}
-
-	onEventSelected(event) {
-
-	}
 
 }

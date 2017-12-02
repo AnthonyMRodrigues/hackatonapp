@@ -10,7 +10,6 @@ import { AlunosPage } from '../pages/alunos/alunos';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { TurmasPage } from '../pages/turmas/turmas';
 import { DadosDoAlunoPage } from '../pages/dados-do-aluno/dados-do-aluno';
-import { CalendarModule } from 'ionic3-calendar';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -31,8 +30,7 @@ import { RequisitionsProvider } from '../providers/requisitions/requisitions';
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp),
-    CalendarModule
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
