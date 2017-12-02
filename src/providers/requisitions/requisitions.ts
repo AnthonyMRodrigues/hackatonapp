@@ -31,7 +31,7 @@ constructor(public http: Http, public toastCtrl: ToastController) {
         this.toastedfailed('Login e senha incorreto');
     });
   }
-  
+
   toastedfailed(msg) {
     let toast = this.toastCtrl.create({
       message: msg,
@@ -64,6 +64,17 @@ constructor(public http: Http, public toastCtrl: ToastController) {
     });
   //console.log(data);
    // return this.http.get(this.url);
+}
+findstudent(id)
+{
+  this.http.post(this.url, id)
+  .toPromise()
+  .then(data => {
+
+  })
+  .catch((erro) => {
+
+  });
 }
 
 }
