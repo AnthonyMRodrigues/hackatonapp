@@ -28,7 +28,7 @@ constructor(public http: Http, public toastCtrl: ToastController) {
     })
     .catch((error) => {
         navc.push(TabsPage);
-        //this.loginfailed();
+        /** this.loginfailed(); **/
     });
   }
 
