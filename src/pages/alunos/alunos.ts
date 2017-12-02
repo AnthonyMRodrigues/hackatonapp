@@ -17,15 +17,24 @@ import { DadosDoAlunoPage } from "../dados-do-aluno/dados-do-aluno";
 export class AlunosPage {
 
     listaDeAlunos : any;
+    listaDeTurmas : any;
 
     constructor(public navCtrl: NavController, public navParams: NavParams) {
         this.listaDeAlunos = [
-            {id: 1, nome: "Teste 1", turma: "turma 1", img: "http://lorempixel.com/400/200"},
-            {id: 1, nome: "Teste 2", turma: "turma 2", img: "http://lorempixel.com/400/200"},
-            {id: 1, nome: "Teste 3", turma: "turma 3", img: "http://lorempixel.com/400/200"},
-            {id: 1, nome: "Teste 4", turma: "turma 4", img: "http://lorempixel.com/400/200"},
-            {id: 1, nome: "Teste 5", turma: "turma 5", img: "http://lorempixel.com/400/200"}
+            {id: 1, nome: "Cadu Santos", turma: "turma 1"},
+            {id: 1, nome: "Manuela Soares", turma: "Turma 2"},
+            {id: 1, nome: "Carla da Silva", turma: "turma 3"},
+            {id: 1, nome: "Maria Clara", turma: "turma 4",},
+            {id: 1, nome: "Pablo Algusto", turma: "turma 5"}
         ];
+
+        this.listaDeTurmas = [
+            {id: 1, turma: "Turma 1"},
+            {id: 1, turma: "Turma 2"},
+            {id: 1, turma: "Turma 3"},
+            {id: 1, turma: "Turma 4"},
+            {id: 1, turma: "Turma 5"}
+        ];    
     }
 
     telaVisualizarDadosDoAluno(idAluno){

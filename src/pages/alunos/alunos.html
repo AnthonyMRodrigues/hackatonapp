@@ -15,11 +15,18 @@
 
 <ion-content padding>
     <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterItems()"></ion-searchbar>
+
+    <ion-item><br>
+      <ion-label>Escolher turma</ion-label>
+      <ion-select [(ngModel)]="gender">
+        <ion-option>Todas turmas</ion-option>        
+        <ion-option *ngFor="let turma of listaDeTurmas">{{turma.turma}}</ion-option>
+      </ion-select>
+    </ion-item><br>
+
+
     <ion-list>
       <ion-item (click)="telaVisualizarDadosDoAluno(aluno.id)" *ngFor="let aluno of listaDeAlunos">
-        <ion-avatar item-start>
-            <img src="{{aluno.img}}">
-         </ion-avatar>
         <h2>{{aluno.nome}}</h2>
         <h3>{{aluno.turma}}</h3>
         <ion-avatar item-end>
