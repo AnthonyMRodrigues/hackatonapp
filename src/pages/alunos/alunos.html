@@ -7,12 +7,20 @@
 <ion-header>
 
   <ion-navbar color="fundo">
-    <ion-title>alunos</ion-title>
+    <ion-title>Alunos</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+    <ion-list>
+      <ion-item *ngFor="let aluno of listaDeAlunos">
+        <ion-avatar item-start>
+            <img src="{{aluno.img}}">
+         </ion-avatar>
+        <h2>{{aluno.nome}}</h2>
+        <h3>{{aluno.turma}}</h3>
+      </ion-item>
+    </ion-list>
 </ion-content>
