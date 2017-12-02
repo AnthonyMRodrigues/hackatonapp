@@ -14,10 +14,33 @@
 
 
 <ion-content padding>
-	<!-- <expandable [expandHeight]="itemExpandHeight" [expanded]="item.expanded">
-    	some content here
-	</expandable>
-	<div #expandWrapper class='expand-wrapper' [class.collapsed]="!expanded">
-    	<ng-content></ng-content>
-	</div> -->
+  <ion-list>
+    <ion-item *ngFor="let d of disciplinas; let i=index" text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+      <h3>
+        {{d.title}}
+        <ion-icon color="success" item-right [name]="isGroupShown(i) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
+      </h3>
+      <table *ngIf="isGroupShown(i);" cellspacing="40">
+        <!-- <colgroup>
+          <col style="width: 70%;">
+          <col style="width: 30%;">
+        </colgroup> -->
+        <tr>
+          <th>Periodo</th>
+          <th>Nota</th>
+        </tr>
+        <tr  *ngFor="let row of d.table">
+          <td style="width: 70%">{{row.periodo}}</td>
+          <td style="width: 30%">{{row.nota}}</td>
+        </tr>
+      </table>
+    </ion-item>
+  </ion-list>
+  <ion-calendar
+  (onEventSelected)="onEventSelected($event)"
+  (onTitleChanged)="onViewTitleChanged($event)"
+  (onTimeSelected)="onTimeSelected($event)"
+  step="30"
+  class="calendar">
+  </ion-calendar>
 </ion-content>
