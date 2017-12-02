@@ -10,6 +10,7 @@ import { AlunosPage } from '../pages/alunos/alunos';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { TurmasPage } from '../pages/turmas/turmas';
 import { DadosDoAlunoPage } from '../pages/dados-do-aluno/dados-do-aluno';
+import { ObservacoesImportantesPage } from '../pages/dashboard/modal';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -24,7 +25,8 @@ import { RequisitionsProvider } from '../providers/requisitions/requisitions';
     AlunosPage,
     DashboardPage,
     TurmasPage,
-    DadosDoAlunoPage
+    DadosDoAlunoPage,
+    ObservacoesImportantesPage
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,8 @@ import { RequisitionsProvider } from '../providers/requisitions/requisitions';
     AlunosPage,
     DashboardPage,
     TurmasPage,
-    DadosDoAlunoPage
+    DadosDoAlunoPage,
+    ObservacoesImportantesPage
   ],
   providers: [
     StatusBar,

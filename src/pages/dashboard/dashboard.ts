@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { RequisitionsProvider } from '../../providers/requisitions/requisitions';
+import { ModalController } from "ionic-angular/index";
+import { ObservacoesImportantesPage } from './modal';
+import { TurmasPage } from '../turmas/turmas';
 
 /**
  * Generated class for the DashboardPage page.
@@ -14,12 +18,33 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'dashboard.html',
 })
 export class DashboardPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+turmas: any;
+//, public requisitions: RequisitionsProvider
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modal: ModalController) {
+    this.returnDataOfTurmas();
+    this.instanceModal();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad DashboardPage');
+  returnDataOfTurmas()
+  {
+    this.turmas = [
+      {"descricao":"a", "id": 2},
+      {"descricao":"b", "id": 1}
+    ];
+    
+    //this.turmas = this.requisitions.callTurmasFromData();
+
+    /**/
+  }
+  telaVisualizarDadosDaTurma(id, type)
+  {
+    this.navCtrl.push(TurmasPage, {id, type});
+  }
+
+  instanceModal()
+  {
+    let modalobservacao = this.modal.create(ObservacoesImportantesPage);
+    modalobservacao.present();
   }
 
 }

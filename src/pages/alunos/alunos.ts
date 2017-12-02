@@ -17,7 +17,7 @@ import { DadosDoAlunoPage } from "../dados-do-aluno/dados-do-aluno";
 export class AlunosPage {
 
     listaDeAlunos : any;
-
+    searchTerm : String;
     constructor(public navCtrl: NavController, public navParams: NavParams) {
         this.listaDeAlunos = [
             {id: 1, nome: "Teste 1", turma: "turma 1", img: "http://lorempixel.com/400/200"},
@@ -32,9 +32,10 @@ export class AlunosPage {
         this.navCtrl.push(DadosDoAlunoPage, {idAluno: idAluno});
     }
 
-    filterItems(searchTerm){
+    filterItems(){
         return this.listaDeAlunos.filter((aluno) => {
-            return aluno.nome.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
+            console.log(this.searchTerm);
+            return (aluno.nome.toLowerCase().search(this.searchTerm.toLowerCase())>1);
         });
     }
 

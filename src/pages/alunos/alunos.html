@@ -14,7 +14,14 @@
 
 
 <ion-content padding>
-    <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterItems()"></ion-searchbar>
+
+    <ion-searchbar
+    [(ngModel)]="searchTerm"
+    placeholder="Busque o aluno"
+    (search)="filterItems()"
+    autocomplete="on"
+    [debounce]="600">
+  </ion-searchbar>
     <ion-list>
       <ion-item *ngFor="let aluno of listaDeAlunos">
         <ion-avatar item-start>
