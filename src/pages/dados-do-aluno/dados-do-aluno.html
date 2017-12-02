@@ -21,10 +21,6 @@
         <ion-icon color="success" item-right [name]="isGroupShown(i) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
       </h3>
       <table *ngIf="isGroupShown(i);" cellspacing="40">
-        <!-- <colgroup>
-          <col style="width: 70%;">
-          <col style="width: 30%;">
-        </colgroup> -->
         <tr>
           <th>Periodo</th>
           <th>Nota</th>
@@ -36,11 +32,4 @@
       </table>
     </ion-item>
   </ion-list>
-  <ion-calendar
-  (onEventSelected)="onEventSelected($event)"
-  (onTitleChanged)="onViewTitleChanged($event)"
-  (onTimeSelected)="onTimeSelected($event)"
-  step="30"
-  class="calendar">
-  </ion-calendar>
 </ion-content>
