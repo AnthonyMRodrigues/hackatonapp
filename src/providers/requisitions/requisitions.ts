@@ -14,7 +14,7 @@ export class RequisitionsProvider {
 url: any;
 
 constructor(public http: Http, public toastCtrl: ToastController) {
-    this.url= 'teste.com';
+    this.url= 'https://google.com.br/';
 }
   callLogin(login, password, navc)
   {
@@ -31,10 +31,10 @@ constructor(public http: Http, public toastCtrl: ToastController) {
         /** this.loginfailed(); **/
     });
   }
-
-  loginfailed() {
+  
+  toastedfailed(msg) {
     let toast = this.toastCtrl.create({
-      message: 'Login e senha incorreto',
+      message: msg,
       duration: 3000,
       position: 'bottom'
     });
@@ -51,5 +51,19 @@ constructor(public http: Http, public toastCtrl: ToastController) {
       return false;
   });
   }
+
+  callTurmasFromData()
+  {
+    this.http.get(this.url)
+    .toPromise()
+    .then(data => {
+      return data.json()
+    })
+    .catch((erro) => {
+      return '';
+    });
+  //console.log(data);
+   // return this.http.get(this.url);
+}
 
 }

@@ -12,7 +12,26 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
-    
+  <ion-list *ngIf="turmas!= null">
+    <ion-item *ngFor="let turma of turmas">
+      <h2>{{turma.descricao}} - {{turma.id}}</h2>
+      <ion-avatar item-end>
+      <ion-grid>
+          <ion-row>
+              <ion-col>
+                 <button ion-button right round outline (click)="telaVisualizarDadosDaTurma(turma.id, 'presenca')">Presença</button>
+              </ion-col>
+              <ion-col>
+                 <button ion-button right round outline (click)="telaVisualizarDadosDaTurma(turma.id, 'nota')">Nota</button>
+              </ion-col>
+          </ion-row>
+      </ion-grid>
+    </ion-avatar>
+    </ion-item>
   </ion-list>
+  <ion-list *ngIf="turmas == null">
+      <ion-item>
+        <h2>Sem turma para esse dia</h2>
+      </ion-item>
+    </ion-list>
 </ion-content>
