@@ -1,9 +1,6 @@
 import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { ToastController } from 'ionic-angular';
-import { NavController } from 'ionic-angular';
-import { DashboardPage } from '../../pages/dashboard/dashboard';
-import { DadosDoAlunoPage } from '../../pages/dados-do-aluno/dados-do-aluno';
 import { TabsPage } from '../../pages/tabs/tabs';
 
 /*
@@ -22,19 +19,16 @@ constructor(public http: Http, public toastCtrl: ToastController) {
   callLogin(login, password, navc)
   {
     let data = {
-      'login': login, 
+      'login': login,
       'password': password
     };
     this.http.post(this.url, data) .toPromise()
     .then(data => {
-    console.log('pqp');
-      navc.push(DadosDoAlunoPage);
+      navc.push(TabsPage);
     })
     .catch((error) => {
-    console.log('tnc');
-     navc.push(TabsPage);
-
-      this.loginfailed();
+        navc.push(TabsPage);
+        this.loginfailed();
     });
   }
 
@@ -46,4 +40,10 @@ constructor(public http: Http, public toastCtrl: ToastController) {
     });
     toast.present();
   }
+
+  getObservacoesAlunos(login, password, navc)
+  {
+    
+  }
+
 }

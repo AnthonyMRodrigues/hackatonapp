@@ -28,8 +28,4 @@ validation: any={};
     console.log(this.validation.value['password']);
     this.requisitions.callLogin(this.loginacess, this.passwordacess, this.navCtrl);
   }
-  teste()
-  {
-    this.navCtrl.push(DashboardPage);
-  }
 }
