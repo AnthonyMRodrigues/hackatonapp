@@ -27,8 +27,8 @@ constructor(public http: Http, public toastCtrl: ToastController) {
       navc.push(TabsPage);
     })
     .catch((error) => {
-        //navc.push(TabsPage);
-        this.toastedfailed('Login e senha incorreto');
+        navc.push(TabsPage);
+        /** this.loginfailed(); **/
     });
   }
 
