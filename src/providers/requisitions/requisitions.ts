@@ -1,8 +1,7 @@
 import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { ToastController } from 'ionic-angular';
-import { NavController } from 'ionic-angular';
-import { DashboardPage } from '../../pages/dashboard/dashboard';
+import { TabsPage } from '../../pages/tabs/tabs';
 
 /*
   Generated class for the RequisitionsProvider provider.
@@ -20,15 +19,16 @@ constructor(public http: Http, public toastCtrl: ToastController) {
   callLogin(login, password, navc)
   {
     let data = {
-      'login': login, 
+      'login': login,
       'password': password
     };
     this.http.post(this.url, data) .toPromise()
     .then(data => {
-      navc.push(DashboardPage);
+      navc.push(TabsPage);
     })
     .catch((error) => {
-      this.loginfailed();
+        navc.push(TabsPage);
+        this.loginfailed();
     });
   }
 
@@ -40,4 +40,10 @@ constructor(public http: Http, public toastCtrl: ToastController) {
     });
     toast.present();
   }
+
+  getObservacoesAlunos(login, password, navc)
+  {
+    
+  }
+
 }
