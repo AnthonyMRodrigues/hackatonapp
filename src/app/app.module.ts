@@ -8,7 +8,6 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { AlunosPage } from '../pages/alunos/alunos';
 import { DashboardPage } from '../pages/dashboard/dashboard';
-import { PerfilPage } from '../pages/perfil/perfil';
 import { TurmasPage } from '../pages/turmas/turmas';
 import { DadosDoAlunoPage } from '../pages/dados-do-aluno/dados-do-aluno';
 
@@ -24,7 +23,6 @@ import { RequisitionsProvider } from '../providers/requisitions/requisitions';
     TabsPage,
     AlunosPage,
     DashboardPage,
-    PerfilPage,
     TurmasPage,
     DadosDoAlunoPage
   ],
@@ -40,7 +38,6 @@ import { RequisitionsProvider } from '../providers/requisitions/requisitions';
     TabsPage,
     AlunosPage,
     DashboardPage,
-    PerfilPage,
     TurmasPage,
     DadosDoAlunoPage
   ],
