@@ -8,27 +8,28 @@
     <ion-grid text-center>
         <ion-row>
             <ion-col>
-                <h2>Bem vindo ao NomeSistema</h2>
+                <h2>Bem vindo ao Prometheus</h2>
             </ion-col>
         </ion-row>
     </ion-grid>
-
-  <ion-list>
-      <ion-item>
-        <ion-label color="primary" floating>Login</ion-label>
-        <ion-input [(ngModel)]="login"></ion-input>
-      </ion-item>
-    
-      <ion-item>
-          <ion-label color="primary" floating>Senha</ion-label>
-        <ion-input [(ngModel)]="password" type="password"></ion-input>
-      </ion-item>
-    </ion-list>
-    <ion-grid text-center>
-        <ion-row>
-            <ion-col>
-               <button ion-button right round outline (click)="actionlogin()">Enviar</button>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
+    <form [formGroup]="validation" (ngSubmit)="teste()">
+        <ion-list>
+            <ion-item>
+              <ion-label color="primary" floating>Login</ion-label>
+              <ion-input name="name" formControlName="login"></ion-input>
+            </ion-item>
+          
+            <ion-item>
+                <ion-label color="primary" floating>Senha</ion-label>
+              <ion-input name="password" formControlName="password" type="password"></ion-input>
+            </ion-item>
+          </ion-list>
+          <ion-grid text-center>
+              <ion-row>
+                  <ion-col>
+                     <button [disabled]="validation.invalid" ion-button right round outline>Enviar</button>
+                  </ion-col>
+              </ion-row>
+          </ion-grid>
+    </form>
 </ion-content>
