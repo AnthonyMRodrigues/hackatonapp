@@ -12,10 +12,11 @@ import { TurmasPage } from '../pages/turmas/turmas';
 import { DadosDoAlunoPage } from '../pages/dados-do-aluno/dados-do-aluno';
 import { ObservacoesImportantesPage } from '../pages/dashboard/modal';
 
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { RequisitionsProvider } from '../providers/requisitions/requisitions';
+
+
 
 @NgModule({
   declarations: [
