@@ -16,6 +16,7 @@ import { DadosDoAlunoPage } from '../pages/dados-do-aluno/dados-do-aluno';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { RequisitionsProvider } from '../providers/requisitions/requisitions';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    RequisitionsProvider
   ]
 })
 export class AppModule {}
