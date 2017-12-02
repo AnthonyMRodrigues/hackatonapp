@@ -11,6 +11,8 @@ import { AlunosPage } from '../pages/alunos/alunos';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { PerfilPage } from '../pages/perfil/perfil';
 import { TurmasPage } from '../pages/turmas/turmas';
+import { DadosDoAlunoPage } from '../pages/dados-do-aluno/dados-do-aluno';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -25,7 +27,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AlunosPage,
     DashboardPage,
     PerfilPage,
-    TurmasPage
+    TurmasPage,
+    DadosDoAlunoPage
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AlunosPage,
     DashboardPage,
     PerfilPage,
-    TurmasPage
+    TurmasPage,
+    DadosDoAlunoPage
   ],
   providers: [
     StatusBar,
