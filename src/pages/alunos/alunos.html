@@ -19,7 +19,7 @@
     <ion-item><br>
       <ion-label>Escolher turma</ion-label>
       <ion-select [(ngModel)]="gender">
-        <ion-option>Todas turmas</ion-option>        
+        <ion-option selected>Todas turmas</ion-option>        
         <ion-option *ngFor="let turma of listaDeTurmas">{{turma.turma}}</ion-option>
       </ion-select>
     </ion-item><br>
