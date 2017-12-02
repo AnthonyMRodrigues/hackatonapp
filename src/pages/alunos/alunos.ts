@@ -29,7 +29,7 @@ export class AlunosPage {
     }
 
     telaVisualizarDadosDoAluno(idAluno){
-        this.navCtrl.push(DadosDoAlunoPage, idAluno: idAluno);
+        this.navCtrl.push(DadosDoAlunoPage, {idAluno: idAluno});
     }
 
     filterItems(searchTerm){
