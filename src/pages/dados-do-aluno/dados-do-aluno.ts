@@ -16,11 +16,66 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 export class DadosDoAlunoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+	disciplinas: any;
+	info: any;
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad DadosDoAlunoPage');
-  }
+	eventSource = [];
+	viewTitle: string;
+
+	selectedDay = new Date();
+
+	calendar = {
+		mode: 'month',
+		currentDate: this.selectedDay,
+	}
+
+	constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+		this.info = {
+			disciplina: "Matemática",
+			rendimento: [
+				{ periodo: "2016.1", nota: 9.7 },
+				{ periodo: "2017.1", nota: 7.1 },
+				{ periodo: "2017.2", nota: 6.7 }
+			]
+		};
+
+		this.disciplinas = [
+		    { title: this.info.disciplina, table: this.info.rendimento },
+		    { title: this.info.disciplina, table: this.info.rendimento },
+		    { title: this.info.disciplina, table: this.info.rendimento }
+		];
+
+	}
+
+    ionViewDidLoad() {
+		console.log('ionViewDidLoad DadosDoAlunoPage');
+    }
+
+	shownGroup = null;
+
+	toggleGroup(group) {
+		if (this.isGroupShown(group)) {
+			this.shownGroup = null;
+		} else {
+			this.shownGroup = group;
+		}
+	};
+
+	isGroupShown(group) {
+		return this.shownGroup === group;
+	};
+
+	onViewTitleChanged(title) {
+		this.viewTitle = title;
+	}
+
+	onTimeSelected(event) {
+
+	}
+
+	onEventSelected(event) {
+
+	}
 
 }
