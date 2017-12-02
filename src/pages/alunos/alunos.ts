@@ -21,11 +21,11 @@ export class AlunosPage {
 
     constructor(public navCtrl: NavController, public navParams: NavParams) {
         this.listaDeAlunos = [
-            {id: 1, nome: "Cadu Santos", turma: "Turma 1"},
-            {id: 1, nome: "Manuela Soares", turma: "Turma 2"},
-            {id: 1, nome: "Carla da Silva", turma: "Turma 3"},
-            {id: 1, nome: "Maria Clara", turma: "Turma 4",},
-            {id: 1, nome: "Pablo Algusto", turma: "Turma 5"}
+            {id: 1, nome: "Cadu Santos", turma: "Turma 1", media: 6.6},
+            {id: 1, nome: "Manuela Soares", turma: "Turma 2", media: 3.6},
+            {id: 1, nome: "Carla da Silva", turma: "Turma 3", media: 7.6},
+            {id: 1, nome: "Maria Clara", turma: "Turma 4", media: 9.6},
+            {id: 1, nome: "Pablo Algusto", turma: "Turma 5", media: 2.6}
         ];
 
         this.listaDeTurmas = [

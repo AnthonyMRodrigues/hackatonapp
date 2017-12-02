@@ -1,7 +1,6 @@
 page-home {
     .test {
-        color: #64b5f6 !important;
-        
+        color: #034ea2 !important;
     }
     img {
         margin: -20px;
@@ -12,5 +11,13 @@ page-home {
         font-weight: 700;    
         font-size: 25px;
     }
+
+    ion-title{
+        text-align: center;
+    }
+
+    ion-content{
+            background-color: #A9A9A9;
+        }
 
 }
