@@ -16,14 +16,14 @@
 <ion-content padding>
     <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterItems()"></ion-searchbar>
     <ion-list>
-      <ion-item *ngFor="let aluno of listaDeAlunos">
+      <ion-item (click)="telaVisualizarDadosDoAluno(aluno.id)" *ngFor="let aluno of listaDeAlunos">
         <ion-avatar item-start>
             <img src="{{aluno.img}}">
          </ion-avatar>
         <h2>{{aluno.nome}}</h2>
         <h3>{{aluno.turma}}</h3>
         <ion-avatar item-end>
-            <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" (click)="telaVisualizarDadosDoAluno(aluno.id)"></ion-icon>
+            <ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon>
          </ion-avatar>
       </ion-item>
     </ion-list>
