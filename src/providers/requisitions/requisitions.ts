@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { ToastController } from 'ionic-angular';
 import { NavController } from 'ionic-angular';
 import { DashboardPage } from '../../pages/dashboard/dashboard';
+import { DadosDoAlunoPage } from '../../pages/dados-do-aluno/dados-do-aluno';
+import { TabsPage } from '../../pages/tabs/tabs';
 
 /*
   Generated class for the RequisitionsProvider provider.
@@ -25,9 +27,13 @@ constructor(public http: Http, public toastCtrl: ToastController) {
     };
     this.http.post(this.url, data) .toPromise()
     .then(data => {
-      navc.push(DashboardPage);
+    console.log('pqp');
+      navc.push(DadosDoAlunoPage);
     })
     .catch((error) => {
+    console.log('tnc');
+     navc.push(TabsPage);
+
       this.loginfailed();
     });
   }

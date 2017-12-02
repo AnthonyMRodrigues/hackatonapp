@@ -13,6 +13,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-dados-do-aluno',
   templateUrl: 'dados-do-aluno.html',
 })
+
 export class DadosDoAlunoPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
