@@ -43,7 +43,13 @@ constructor(public http: Http, public toastCtrl: ToastController) {
 
   getObservacoesAlunos(login, password, navc)
   {
-    
+    this.http.get(this.url) .toPromise()
+  .then(data => {
+      return data;
+  })
+  .catch((error) => {
+      return false;
+  });
   }
 
 }
