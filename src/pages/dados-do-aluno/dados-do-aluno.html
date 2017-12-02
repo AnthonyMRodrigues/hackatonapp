@@ -16,9 +16,9 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item *ngFor="let d of disciplinas; let i=index" text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+    <ion-item *ngFor="let disciplina of disciplinas; let i=index" text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
       <h3>
-        {{d.title}}
+        {{disciplina.title}}
         <ion-icon color="success" item-right [name]="isGroupShown(i) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
       </h3>
       <table *ngIf="isGroupShown(i);" cellspacing="40">
@@ -26,7 +26,7 @@
           <th>Periodo</th>
           <th>Nota</th>
         </tr>
-        <tr  *ngFor="let row of d.table">
+        <tr  *ngFor="let row of disciplina.table;">
           <td style="width: 70%">{{row.periodo}}</td>
           <td style="width: 30%">{{row.nota}}</td>
         </tr>

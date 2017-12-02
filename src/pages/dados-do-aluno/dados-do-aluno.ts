@@ -15,19 +15,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 
 export class DadosDoAlunoPage {
-
+	id: any;
 	disciplinas: any;
 	info: any;
 
 	constructor(public navCtrl: NavController, public navParams: NavParams) {
+		this.id = navParams.get('idAluno');
 		this.info = {
-			disciplina: "Matemática",
-			rendimento: [
-				{ periodo: "2016.1", nota: 9.7 },
-				{ periodo: "2017.1", nota: 7.1 },
-				{ periodo: "2017.2", nota: 6.7 }
+			"disciplina": "Matemática",
+			"rendimento" : [
+				{ "periodo": "2016.1", "nota": 9.7 },
+				{ "periodo": "2017.1", "nota": 7.1 },
+				{ "periodo": "2017.2", "nota": 6.7 }
 			]
-		};
+		}
 
 		this.disciplinas = [
 		    { title: this.info.disciplina, table: this.info.rendimento },

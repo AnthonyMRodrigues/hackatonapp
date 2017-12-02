@@ -10,18 +10,16 @@
 </ion-header>
 
 
-<ion-content color="fundo" padding>
-    <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterItems()"></ion-searchbar>
 
-    <ion-item><br>
-      <ion-label>Escolher turma</ion-label>
-      <ion-select [(ngModel)]="gender">
-        <ion-option selected>Todas turmas</ion-option>        
-        <ion-option *ngFor="let turma of listaDeTurmas">{{turma.turma}}</ion-option>
-      </ion-select>
-    </ion-item><br>
+<ion-content padding>
 
-
+    <ion-searchbar
+    [(ngModel)]="searchTerm"
+    placeholder="Busque o aluno"
+    (search)="filterItems()"
+    autocomplete="on"
+    [debounce]="600">
+  </ion-searchbar>
     <ion-list>
       <ion-item (click)="telaVisualizarDadosDoAluno(aluno.id)" *ngFor="let aluno of listaDeAlunos">
         <h2>{{aluno.nome}}&nbsp;&nbsp;&nbsp;
@@ -38,3 +36,25 @@
       </ion-item>
     </ion-list>
 </ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+//<ion-content color="fundo" padding>
+  //  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterItems()"></ion-searchbar>
+
+    //<ion-item><br>
+      //<ion-label>Escolher turma</ion-label>
+      //<ion-select [(ngModel)]="gender">
+       // <ion-option selected>Todas turmas</ion-option>        
+       // <ion-option *ngFor="let turma of listaDeTurmas">{{turma.turma}}</ion-option>
+      //</ion-select>
+   // </ion-item><br>

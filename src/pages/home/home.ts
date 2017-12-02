@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { RequisitionsProvider } from '../../providers/requisitions/requisitions';
 import { FormBuilder, Validators } from '@angular/forms';
-import { DashboardPage } from '../dashboard/dashboard';
+import {TabsPage } from '../tabs/tabs';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -13,7 +13,7 @@ login: any;
 password: String;
 passwordacess: any;
 validation: any={};
-  constructor(public navCtrl: NavController, public requisitions: RequisitionsProvider,public formBuilder: FormBuilder,) {
+  constructor(public navCtrl: NavController, public requisitions: RequisitionsProvider,public formBuilder: FormBuilder) {
     this.validation = this.formBuilder.group({
       login:['', Validators.required],
       password:['', Validators.required],
@@ -26,6 +26,7 @@ validation: any={};
     this.passwordacess = this.password;
     console.log(this.validation.value['login']);
     console.log(this.validation.value['password']);
-    this.requisitions.callLogin(this.loginacess, this.passwordacess, this.navCtrl);
+    this.navCtrl.push(TabsPage);
+    //this.requisitions.callLogin(this.loginacess, this.passwordacess, this.navCtrl);
   }
 }

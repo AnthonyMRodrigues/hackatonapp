@@ -15,11 +15,43 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TurmasPage {
 
+  descricao: String;
+  id: any;
+  alunos: any;
+  type : any;
+  presenca: boolean;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.id = navParams.get('id');
+    this.type = navParams.get('type');
+    this.getTurmaDescricao(this.id);
+    this.getAlunosTurma(this.id);
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TurmasPage');
   }
 
+  getTurmaDescricao(id)
+  {
+    this.descricao = 'teste';
+    //chamar o provider e realizar a busca
+  }
+
+  getAlunosTurma(id)
+  {
+
+    this.alunos = [
+      {"nome": "Maria", "nota": 1,"id": 2 },
+      {"nome": "Outro", "nota": 7,"id": 1 },
+      {"nome": "teste", "nota": 4,"id": 3 }
+    ];
+     //chamar o provider e realizar a busca
+  }
+
+  changePresence(ida)
+  {
+    let id = this.navParams.get('aluno.id');
+    console.log(id);
+  }
 }
