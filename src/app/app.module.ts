@@ -2,6 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+import { HttpModule } from '@angular/http';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -26,10 +27,11 @@ import { RequisitionsProvider } from '../providers/requisitions/requisitions';
     AlunosPage,
     DashboardPage,
     PerfilPage,
-    TurmasPage
+    TurmasPage,
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -42,13 +44,13 @@ import { RequisitionsProvider } from '../providers/requisitions/requisitions';
     AlunosPage,
     DashboardPage,
     PerfilPage,
-    TurmasPage
+    TurmasPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    RequisitionsProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    RequisitionsProvider
   ]
 })
 export class AppModule {}
