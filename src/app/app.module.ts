@@ -7,6 +7,10 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { AlunosPage } from '../pages/alunos/alunos';
+import { DashboardPage } from '../pages/dashboard/dashboard';
+import { PerfilPage } from '../pages/perfil/perfil';
+import { TurmasPage } from '../pages/turmas/turmas';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -18,7 +22,11 @@ import { RequisitionsProvider } from '../providers/requisitions/requisitions';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    AlunosPage,
+    DashboardPage,
+    PerfilPage,
+    TurmasPage
   ],
   imports: [
     BrowserModule,
@@ -30,7 +38,11 @@ import { RequisitionsProvider } from '../providers/requisitions/requisitions';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    AlunosPage,
+    DashboardPage,
+    PerfilPage,
+    TurmasPage
   ],
   providers: [
     StatusBar,
