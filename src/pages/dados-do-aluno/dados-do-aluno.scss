@@ -1,8 +1,31 @@
 page-dados-do-aluno {
     h4{
          font-family: "Times New Roman", Times, serif;
+        color: #034ea2 !important;
+         
        }
         .card-content-md{ 
                padding: 1px 1px;  
-           }    
+           }  
+       
+        .estrela{
+            color: yellow;
+        }
+         
+        .alerta{
+            color:red;
+        }
+       h1{
+        font-family: "Times New Roman", Times, serif;
+        color: #034ea2 !important;
+        text-align: center;
+    }      
+    
+    .materias{
+        font-size: 17px;
+        font-family: "Times New Roman", Times, serif;
+        background-color:#FFFAFA;
+        text-align: left;
+    }
+    
 }   

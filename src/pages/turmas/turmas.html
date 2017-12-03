@@ -14,6 +14,9 @@
 
 
 <ion-content padding>
+    <h3>Lista de chamada</h3><hr>
+
+
     <ion-list *ngIf="alunos!= null">
         <ion-item *ngFor="let aluno of alunos; let i=$index">
               <ion-label>{{aluno.nome}}</ion-label>

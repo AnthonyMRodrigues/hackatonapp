@@ -16,17 +16,18 @@
 
 <ion-content padding>
     <h1>{{alunoSelecionado.nome}}</h1>
+    <hr>
     <h4>Destaque</h4>
     <ion-card>
       <img src="img/advance-card-map-madison.png">
         <ion-item>
           <ion-icon name="football" item-start large></ion-icon>
-          <h2>Futebol</h2>
+          <h2><ion-icon class="estrela" ios="md-star" md="md-star"></ion-icon>&nbsp;Futebol</h2>
           <p>Ótimo jogador, tem um futuro<br> brilhante.</p>
         </ion-item>
         <ion-item>
           <ion-icon name="book" item-left large ></ion-icon>
-          <h2>Matemática</h2>
+          <h2><ion-icon class="alerta" ios="md-alert" md="md-alert"></ion-icon>&nbsp;Matemática</h2>
           <p>Ele precisa estudar mais.</p>
         </ion-item>
   </ion-card>
@@ -34,8 +35,9 @@
   <ion-list>
     <ion-item *ngFor="let disciplina of disciplinas; let i=index" text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
       <ion-card-content>
-      <h3>
-        {{info.disciplina[i]}}
+      <h3 class="materias">
+        <ion-icon name="book" item-left large ></ion-icon>&nbsp;
+        {{info.disciplina[i]}}&nbsp;
         <ion-icon color="success" item-right [name]="isGroupShown(i) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
       </h3>
       <table *ngIf="isGroupShown(i);" cellspacing="40">
@@ -44,7 +46,7 @@
           <th>Nota</th>
         </tr>
         <tr  *ngFor="let row of disciplina.table;">
-          <td style="width: 70%">{{row.periodo}}</td>
+          <td style="width: 100%">{{row.periodo}}</td>
           <td style="width: 30%">{{row.nota}}</td>
         </tr>
       </table>
