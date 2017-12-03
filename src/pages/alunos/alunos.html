@@ -21,7 +21,7 @@
     [debounce]="600">
   </ion-searchbar>
 
-  <ion-item><br>
+  <ion-item><br><br>
  -      <ion-label>Escolher turma</ion-label>
  -      <ion-select [(ngModel)]="gender">
  -        <ion-option selected>Todas turmas</ion-option>        
@@ -31,12 +31,21 @@
 
     <ion-list>
       <ion-item (click)="telaVisualizarDadosDoAluno(aluno.id)" *ngFor="let aluno of listaDeAlunos">
-        <h2>{{aluno.nome}}&nbsp;&nbsp;&nbsp;
-        </h2>
-        <h3>{{aluno.turma}}</h3>
-        <ion-avatar item-end>
-            <ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon>
+          <ion-card>
+          <ion-item>
+            <h2><b>{{aluno.nome}}&nbsp;&nbsp;&nbsp;</b></h2>
+            <p>{{aluno.turma}}</p>
+                    <ion-avatar item-end>
+            <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" class="centro"></ion-icon>
          </ion-avatar>
+          </ion-item>    
+
+                    </ion-card>
+
       </ion-item>
+
     </ion-list>
 </ion-content>
+
+
+

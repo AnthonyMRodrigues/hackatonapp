@@ -34,7 +34,7 @@ export class TurmasPage {
 
   getTurmaDescricao(id)
   {
-    this.descricao = 'teste';
+    this.descricao = 'Turma 222';
     //chamar o provider e realizar a busca
   }
 
@@ -44,7 +44,7 @@ export class TurmasPage {
     this.alunos = [
       {"nome": "Maria", "nota": 1,"id": 2 },
       {"nome": "Outro", "nota": 7,"id": 1 },
-      {"nome": "teste", "nota": 4,"id": 3 }
+      {"nome": "Teste", "nota": 4,"id": 3 }
     ];
      //chamar o provider e realizar a busca
   }
