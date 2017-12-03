@@ -59,16 +59,11 @@ export class TurmasPage {
      //chamar o provider e realizar a busca
   }
 
-  changePresence()
-  {
-    this.instanceModal();
-  }
   showAlert() {
     let alert = this.alertCtrl.create({
       title: 'Dados Salvos',
       subTitle: 'Os dados foram salvos com sucesso.',
       buttons: ['OK'],
-      CssClass : 'alertDanger'
     });
     alert.present();
   }
