@@ -24,7 +24,7 @@
   <ion-item><br><br>
  -      <ion-label>Escolher turma</ion-label>
  -      <ion-select [(ngModel)]="gender">
- -        <ion-option selected>Todas turmas</ion-option>        
+ -        <ion-option selected>Todas turmas</ion-option>
  -        <ion-option *ngFor="let turma of listaDeTurmas">{{turma.turma}}</ion-option>
  -      </ion-select>
  -    </ion-item><br>
@@ -33,19 +33,21 @@
       <ion-item (click)="telaVisualizarDadosDoAluno(aluno)" *ngFor="let aluno of listaDeAlunos">
           <ion-card>
           <ion-item>
+            <ion-icon class="alerta" ios="md-alert" md="md-alert"></ion-icon>
+            <b *ngIf="aluno.media < 5">
+                 <ion-icon class="alerta" ios="md-alert" md="md-alert" >
+                </ion-icon> <h2>{{aluno.nome}}   </h2>
+            </b>
             <h2><b>{{aluno.nome}}&nbsp;&nbsp;&nbsp;</b></h2>
             <p>{{aluno.turma}}</p>
-                    <ion-avatar item-end>
-            <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" class="centro"></ion-icon>
-         </ion-avatar>
-          </ion-item>    
+            <ion-avatar item-end>
+                <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" class="centro"></ion-icon>
+            </ion-avatar>
+          </ion-item>
 
-                    </ion-card>
+        </ion-card>
 
       </ion-item>
 
     </ion-list>
 </ion-content>
-
-
-
