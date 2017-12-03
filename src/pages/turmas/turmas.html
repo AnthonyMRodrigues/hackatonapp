@@ -15,18 +15,17 @@
 
 <ion-content padding>
     <h3>Lista de chamada</h3><hr>
-
-
     <ion-list *ngIf="alunos!= null">
         <ion-item *ngFor="let aluno of alunos; let i=$index">
-              <ion-label>{{aluno.nome}}</ion-label>
-          <ion-avatar item-end *ngIf="type=='presenca'">
+          <ion-item item-end *ngIf="type=='presenca'">
+               <ion-label>{{aluno.nome}}</ion-label>
               <ion-checkbox></ion-checkbox>
-          </ion-avatar>
-          <ion-avatar item-end *ngIf="type=='nota'">
-              <ion-label color="danger" class="nota">Nota</ion-label>
-              <ion-input max='10' min='0'></ion-input>
-          </ion-avatar>
+          </ion-item>
+          <ion-item item-end *ngIf="type=='nota'">
+                        <ion-label>{{aluno.nome}}</ion-label>
+                      <ion-label color="danger" class="nota">Nota</ion-label>
+                      <ion-input max='10' min='0' class="inputNota"></ion-input>
+            </ion-item>
         </ion-item>
       </ion-list>
       <ion-list *ngIf="alunos == null">
