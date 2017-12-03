@@ -14,6 +14,8 @@ import { DadosDoAlunoPage } from '../pages/dados-do-aluno/dados-do-aluno';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { RequisitionsProvider } from '../providers/requisitions/requisitions';
+import { RequestProvider } from '../providers/request/request';
+
 
 
 
@@ -46,6 +48,7 @@ import { RequisitionsProvider } from '../providers/requisitions/requisitions';
     StatusBar,
     SplashScreen,
     RequisitionsProvider,
+    RequestProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
   ]
 })

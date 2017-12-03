@@ -1,7 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+import { NavController } from 'ionic-angular';
+import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
 
-/** 
+/**
 * Classe criada para gerenciar os requests do mobile para o hackathon
 * @author Charley Oliveira <charleycesar@gmail.com>
 **/
@@ -10,10 +11,11 @@ export class RequestProvider {
   endpoint: any;
   params: any;
   token: any;
-  constructor(public http: HttpClient) {
-    this.endpoint = "http://localhost:3000/";
+
+  constructor(public http: Http) {
+    this.endpoint = "http://localhost:3000";
   }
-  
+
   //funcao criada para setar dados para a classe de requisicao via API
   setParam(data){
     this.params = data;
@@ -32,7 +34,7 @@ export class RequestProvider {
     this.hasToken();
     return this.http.post(url, this.params).toPromise()
   }
-  
+
   sendGet(url){
     this.hasToken();
     return this.http.get(url, this.params).toPromise()
@@ -46,22 +48,21 @@ export class RequestProvider {
     return true;
   }
 
-  //Requisicao para fazer o login 
-  login(login, password){
-    this.setParam({ login: login, pasword: password });
-    this.sendPost(this.endpoint + '/login')
+  //Requisicao para fazer o login
+  login(params){
+     this.http.post(this.endpoint + '/login', params).toPromise()
     .then(data => {
         //redirecionar o usuario para a tela de dashboard
         //talvez passar o navCtrl por parazmetro do construtor
         //navc.push(TabsPage);
     })
     .catch((error) => {
-          //deve negar as requisicoes caso de falha  
+          //deve negar as requisicoes caso de falha
         //navc.push(TabsPage);
           /** this.loginfailed(); **/
     });
   }
-  //Pega alunos por professor 
+  //Pega alunos por professor
   getStudent(idProfessor){
     if(!idProfessor){
       throw "Erro ao solicitar os alunos!";
@@ -72,7 +73,7 @@ export class RequestProvider {
     })
     .catch((error) => {
         return false;
-    });  
+    });
   }
   //Pega alunos por turma e filtrando por professor pois o token sera enviado e os dados vao vir no token.
   getStudentsByClassroom(idTurma){
