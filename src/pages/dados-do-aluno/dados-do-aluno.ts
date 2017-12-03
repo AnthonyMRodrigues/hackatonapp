@@ -25,9 +25,11 @@ export class DadosDoAlunoPage {
 			"disciplina": ["Matemática", "Portugues", "Artes", "Desenho",
 			 "Espanhol", "Filosofia", "Fisica", "Quimica"],
 			"rendimento" : [
-				{ "periodo": "2016.1", "nota": 9.7 },
-				{ "periodo": "2017.1", "nota": 7.1 },
-				{ "periodo": "2017.2", "nota": 6.7 }
+				{"": "1 Bimestre", "nota": 5.7 },
+				{"": "2 Bimestre", "nota": 3.2 },
+				{"": "3 Bimestre", "nota": 6.4 },
+				{"": "4 Bimestre", "nota": 3.5 }
+				
 			]
 		}
 
