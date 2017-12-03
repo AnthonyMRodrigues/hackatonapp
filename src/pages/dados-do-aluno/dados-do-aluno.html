@@ -15,8 +15,24 @@
 
 
 <ion-content padding>
+    <h4>Destaque</h4>
+    <ion-card>
+      <img src="img/advance-card-map-madison.png">
+        <ion-item>
+          <ion-icon name="football" item-start large></ion-icon>
+          <h2>Futebol</h2>
+          <p>ótimo jogador, tem um futuro brilhante nesse esporte.</p>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="book" item-left large ></ion-icon>
+          <h2>Matemática</h2>
+          <p>Ele precisa estudar mais.</p>
+        </ion-item>
+  </ion-card>
+
   <ion-list>
     <ion-item *ngFor="let disciplina of disciplinas; let i=index" text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+      <ion-card-content>
       <h3>
         {{disciplina.title}}
         <ion-icon color="success" item-right [name]="isGroupShown(i) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
@@ -31,6 +47,7 @@
           <td style="width: 30%">{{row.nota}}</td>
         </tr>
       </table>
+  </ion-card-content>
     </ion-item>
   </ion-list>
 </ion-content>
