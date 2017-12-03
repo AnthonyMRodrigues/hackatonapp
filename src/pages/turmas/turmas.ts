@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ObservacoesImportantesPage } from './modal';
+import { AlertController } from 'ionic-angular';
+import { ModalController } from "ionic-angular/index";
 
 /**
  * Generated class for the TurmasPage page.
@@ -21,7 +24,8 @@ export class TurmasPage {
   type : any;
   presenca: boolean;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modal: ModalController,
+                public alertCtrl: AlertController) {
     this.id = navParams.get('id');
     this.type = navParams.get('type');
     this.getTurmaDescricao(this.id);
@@ -43,21 +47,29 @@ export class TurmasPage {
 
     this.alunos = [
       {"nome": "Ana Claudia", "nota": 1,"id": 1 },
-      {"nome": "Barbara Ramos", "nota": 4,"id": 2 },      
+      {"nome": "Barbara Ramos", "nota": 4,"id": 2 },
       {"nome": "Beatriz Barbosa", "nota": 7,"id": 3 },
       {"nome": "Beto Souza", "nota": 4,"id": 4 },
-      {"nome": "Carlos Silva", "nota": 4,"id": 5 },      
+      {"nome": "Carlos Silva", "nota": 4,"id": 5 },
       {"nome": "Diego Gomes", "nota": 4,"id": 6 },
       {"nome": "Eduardo Carlos", "nota": 4,"id": 7 },
       {"nome": "Fernada Soares", "nota": 4,"id": 8 },
-      {"nome": "Nathalia Silva", "nota": 4,"id": 9 }           
+      {"nome": "Nathalia Silva", "nota": 4,"id": 9 }
     ];
      //chamar o provider e realizar a busca
   }
 
-  changePresence(ida)
+  changePresence()
   {
-    let id = this.navParams.get('aluno.id');
-    console.log(id);
+    this.instanceModal();
+  }
+  showAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'Dados Salvos',
+      subTitle: 'Os dados foram salvos com sucesso.',
+      buttons: ['OK'],
+      CssClass : 'alertDanger'
+    });
+    alert.present();
   }
 }

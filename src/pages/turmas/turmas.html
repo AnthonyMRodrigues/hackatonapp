@@ -21,7 +21,7 @@
         <ion-item *ngFor="let aluno of alunos; let i=$index">
               <ion-label>{{aluno.nome}}</ion-label>
           <ion-avatar item-end *ngIf="type=='presenca'">
-              <ion-checkbox [(ngModel)]="aluno.present" (ionChange)="changePresence(aluno.id)"></ion-checkbox>
+              <ion-checkbox></ion-checkbox>
           </ion-avatar>
           <ion-avatar item-end *ngIf="type=='nota'">
               <ion-label color="danger" class="nota">Nota</ion-label>
@@ -34,5 +34,5 @@
             <h2>Sem Alunos nessa turma</h2>
           </ion-item>
         </ion-list>
-                <button class="centro" ion-button right outline>Enviar dados</button>
+                <button class="centro" ion-button right outline (click) = "showAlert()">Enviar dados</button>
 </ion-content>

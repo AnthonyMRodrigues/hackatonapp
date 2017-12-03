@@ -10,7 +10,7 @@ import { AlunosPage } from '../pages/alunos/alunos';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { TurmasPage } from '../pages/turmas/turmas';
 import { DadosDoAlunoPage } from '../pages/dados-do-aluno/dados-do-aluno';
-import { ObservacoesImportantesPage } from '../pages/dashboard/modal';
+import { ObservacoesImportantesPage } from '../pages/turmas/modal';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';

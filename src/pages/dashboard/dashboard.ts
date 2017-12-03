@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RequisitionsProvider } from '../../providers/requisitions/requisitions';
 import { ModalController } from "ionic-angular/index";
-import { ObservacoesImportantesPage } from './modal';
 import { TurmasPage } from '../turmas/turmas';
 
 /**
@@ -20,7 +19,7 @@ import { TurmasPage } from '../turmas/turmas';
 export class DashboardPage {
 turmas: any;
 //, public requisitions: RequisitionsProvider
-  constructor(public navCtrl: NavController, public navParams: NavParams, public modal: ModalController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.returnDataOfTurmas();
   }
 
@@ -33,7 +32,7 @@ turmas: any;
       {"descricao":"T334", "id": 4},
       {"descricao":"T333", "id": 5}
     ];
-    
+
     //this.turmas = this.requisitions.callTurmasFromData();
 
     /**/
@@ -42,11 +41,4 @@ turmas: any;
   {
     this.navCtrl.push(TurmasPage, {id, type});
   }
-
-  instanceModal()
-  {
-    let modalobservacao = this.modal.create(ObservacoesImportantesPage);
-    modalobservacao.present();
-  }
-
 }
