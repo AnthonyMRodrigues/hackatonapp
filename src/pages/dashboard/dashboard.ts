@@ -22,7 +22,6 @@ turmas: any;
 //, public requisitions: RequisitionsProvider
   constructor(public navCtrl: NavController, public navParams: NavParams, public modal: ModalController) {
     this.returnDataOfTurmas();
-    this.instanceModal();
   }
 
   returnDataOfTurmas()
@@ -33,7 +32,6 @@ turmas: any;
       {"descricao":"T232", "id": 3},
       {"descricao":"T334", "id": 4},
       {"descricao":"T333", "id": 5}
-      
     ];
     
     //this.turmas = this.requisitions.callTurmasFromData();
