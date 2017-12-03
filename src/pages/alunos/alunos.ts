@@ -20,19 +20,14 @@ export class AlunosPage {
     listaDeTurmas : any;
 searchTerm : String;
     constructor(public navCtrl: NavController, public navParams: NavParams) {
-        this.listaDeAlunos = [
-            {id: 1, nome: "Cadu Santos", turma: "Turma 1", media: 6.6},
-            {id: 1, nome: "Manuela Soares", turma: "Turma 2", media: 3.6},
-            {id: 1, nome: "Carla da Silva", turma: "Turma 3", media: 7.6},
-            {id: 1, nome: "Maria Clara", turma: "Turma 4", media: 9.6},
-            {id: 1, nome: "Pablo Algusto", turma: "Turma 5", media: 2.6}
-            ];
+     
         this.listaDeAlunos = [
             {
                 id: 1, nome: "Maria da Silva", turma: "Turma 123", img: "http://lorempixel.com/400/200",
                 redimentos:
                 {
                     disciplina: "Matemática",
+                    totalNotas: 6,
                     todasNotas: [
                         {periodo: "2016.2", nota: 6.0},
                         {periodo: "2017.1", nota: 7.5},
@@ -45,6 +40,7 @@ searchTerm : String;
                 redimentos:
                 {
                     disciplina: "Matemática",
+                    totalNotas: 4,
                     todasNotas: [
                         {periodo: "2016.2", nota: 6.0},
                         {periodo: "2017.1", nota: 7.5},
@@ -57,6 +53,7 @@ searchTerm : String;
                 redimentos:
                 {
                     disciplina: "Matemática",
+                    totalNotas: 7,                    
                     todasNotas: [
                         {periodo: "2016.2", nota: 6.0},
                         {periodo: "2017.1", nota: 7.5},
@@ -69,6 +66,7 @@ searchTerm : String;
                 redimentos:
                 {
                     disciplina: "Matemática",
+                    totalNotas: 3,
                     todasNotas: [
                         {periodo: "2016.2", nota: 6.0},
                         {periodo: "2017.1", nota: 7.5},
@@ -81,6 +79,7 @@ searchTerm : String;
                 redimentos:
                 {
                     disciplina: "Matemática",
+                     totalNotas: 2,                   
                     todasNotas: [
                         {periodo: "2016.2", nota: 6.0},
                         {periodo: "2017.1", nota: 7.5},

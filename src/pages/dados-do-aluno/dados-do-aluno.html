@@ -42,12 +42,13 @@
       </h3>
       <table *ngIf="isGroupShown(i);" cellspacing="40">
         <tr>
-          <th>Periodo</th>
-          <th>Nota</th>
+          <th></th>
+          <th class="nota">Notas</th>
         </tr>
-        <tr  *ngFor="let row of disciplina.table;">
-          <td style="width: 100%">{{row.periodo}}</td>
-          <td style="width: 30%">{{row.nota}}</td>
+        <tr class="posicao" *ngFor="let row of disciplina.table;">
+          <td style="width: 70%">{{row.periodo}}</td>
+          <td style="width: 20%">{{row.nota}}</td>
+          <hr>
         </tr>
       </table>
   </ion-card-content>

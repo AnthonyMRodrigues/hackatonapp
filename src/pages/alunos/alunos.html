@@ -33,8 +33,8 @@
       <ion-item (click)="telaVisualizarDadosDoAluno(aluno)" *ngFor="let aluno of listaDeAlunos">
           <ion-card>
           <ion-item>
-             <ion-icon *ngIf="aluno.media < 5" class="alerta" ios="md-alert" md="md-alert" ></ion-icon> <h2>{{aluno.nome}}   </h2>
-            <h2><b>{{aluno.nome}}alkjsdfasjdf&nbsp;&nbsp;&nbsp;</b></h2>
+             <ion-icon *ngIf="aluno.rendimentos.totalNotas < 5" class="alerta" ios="md-alert" md="md-alert" ></ion-icon> 
+            <h2><b>{{aluno.nome}}&nbsp;&nbsp;&nbsp;</b></h2>
             <p>{{aluno.turma}}</p>
             <ion-avatar item-end>
                 <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" class="centro"></ion-icon>

@@ -22,10 +22,23 @@ page-dados-do-aluno {
     }      
     
     .materias{
-        font-size: 17px;
+        font-size: 18px;
         font-family: "Times New Roman", Times, serif;
         background-color:#FFFAFA;
         text-align: left;
     }
     
+    .posicao td{
+        margin: 0px;
+        position: relative;
+        left: 30px;
+        font-size: 15px;
+    }
+
+    .nota{
+        font-size: 17px;
+        position: relative;
+        right: 25px;        
+    }
+
 }   
