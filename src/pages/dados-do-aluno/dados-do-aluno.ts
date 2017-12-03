@@ -15,12 +15,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 
 export class DadosDoAlunoPage {
-	id: any;
+	alunoSelecionado: any;
 	disciplinas: any;
 	info: any;
 
 	constructor(public navCtrl: NavController, public navParams: NavParams) {
-		this.id = navParams.get('idAluno');
+		this.alunoSelecionado = navParams.get('aluno');
 		this.info = {
 			"disciplina": ["Matemática", "Portugues", "Artes", "Desenho",
 			 "Espanhol", "Filosofia", "Fisica", "Quimica"],

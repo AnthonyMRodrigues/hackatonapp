@@ -28,11 +28,11 @@ turmas: any;
   returnDataOfTurmas()
   {
     this.turmas = [
-      {"descricao":"122", "id": 1},
-      {"descricao":"234", "id": 2},
-      {"descricao":"232", "id": 3},
-      {"descricao":"334", "id": 4},
-      {"descricao":"333", "id": 5}
+      {"descricao":"T122", "id": 1},
+      {"descricao":"T234", "id": 2},
+      {"descricao":"T232", "id": 3},
+      {"descricao":"T334", "id": 4},
+      {"descricao":"T333", "id": 5}
       
     ];
     

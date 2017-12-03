@@ -99,8 +99,8 @@ searchTerm : String;
         ];    
     }
 
-    telaVisualizarDadosDoAluno(idAluno){
-        this.navCtrl.push(DadosDoAlunoPage, {idAluno});
+    telaVisualizarDadosDoAluno(aluno){
+        this.navCtrl.push(DadosDoAlunoPage, {aluno});
     }
 
     filterItems(){
