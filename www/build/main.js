@@ -31,17 +31,11 @@ var AlunosPage = (function () {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.listaDeAlunos = [
-            { id: 1, nome: "Cadu Santos", turma: "Turma 1", media: 6.6 },
-            { id: 1, nome: "Manuela Soares", turma: "Turma 2", media: 3.6 },
-            { id: 1, nome: "Carla da Silva", turma: "Turma 3", media: 7.6 },
-            { id: 1, nome: "Maria Clara", turma: "Turma 4", media: 9.6 },
-            { id: 1, nome: "Pablo Algusto", turma: "Turma 5", media: 2.6 }
-        ];
-        this.listaDeAlunos = [
             {
                 id: 1, nome: "Maria da Silva", turma: "Turma 123", img: "http://lorempixel.com/400/200",
                 redimentos: {
                     disciplina: "Matemática",
+                    totalNotas: 6,
                     todasNotas: [
                         { periodo: "2016.2", nota: 6.0 },
                         { periodo: "2017.1", nota: 7.5 },
@@ -53,6 +47,7 @@ var AlunosPage = (function () {
                 id: 2, nome: "Rafael Mario", turma: "Turma 223", img: "http://lorempixel.com/400/200",
                 redimentos: {
                     disciplina: "Matemática",
+                    totalNotas: 4,
                     todasNotas: [
                         { periodo: "2016.2", nota: 6.0 },
                         { periodo: "2017.1", nota: 7.5 },
@@ -64,6 +59,7 @@ var AlunosPage = (function () {
                 id: 3, nome: "Carla Santos", turma: "Turma 323", img: "http://lorempixel.com/400/200",
                 redimentos: {
                     disciplina: "Matemática",
+                    totalNotas: 7,
                     todasNotas: [
                         { periodo: "2016.2", nota: 6.0 },
                         { periodo: "2017.1", nota: 7.5 },
@@ -75,6 +71,7 @@ var AlunosPage = (function () {
                 id: 4, nome: "Igor Rodrigues", turma: "Turma 233", img: "http://lorempixel.com/400/200",
                 redimentos: {
                     disciplina: "Matemática",
+                    totalNotas: 3,
                     todasNotas: [
                         { periodo: "2016.2", nota: 6.0 },
                         { periodo: "2017.1", nota: 7.5 },
@@ -86,6 +83,7 @@ var AlunosPage = (function () {
                 id: 5, nome: "Manuela Soares", turma: "Turma 213", img: "http://lorempixel.com/400/200",
                 redimentos: {
                     disciplina: "Matemática",
+                    totalNotas: 2,
                     todasNotas: [
                         { periodo: "2016.2", nota: 6.0 },
                         { periodo: "2017.1", nota: 7.5 },
@@ -125,7 +123,7 @@ var AlunosPage = (function () {
     };
     AlunosPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-alunos',template:/*ion-inline-start:"/home/anthony/novopessoalProjeto/hackatonapp/src/pages/alunos/alunos.html"*/'<!--\n\n-->\n<ion-header>\n\n  <ion-navbar color="fundo">\n    <ion-title><ion-icon ios="md-people" md="md-people"></ion-icon>\n    &nbsp;Alunos</ion-title>  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n    <ion-searchbar\n    [(ngModel)]="searchTerm"\n    placeholder="Busque o aluno"\n    (search)="filterItems()"\n    autocomplete="on"\n    [debounce]="600">\n  </ion-searchbar>\n\n  <ion-item><br><br>\n -      <ion-label>Escolher turma</ion-label>\n -      <ion-select [(ngModel)]="gender">\n -        <ion-option selected>Todas turmas</ion-option>\n -        <ion-option *ngFor="let turma of listaDeTurmas">{{turma.turma}}</ion-option>\n -      </ion-select>\n -    </ion-item><br>\n\n    <ion-list>\n      <ion-item (click)="telaVisualizarDadosDoAluno(aluno)" *ngFor="let aluno of listaDeAlunos">\n          <ion-card>\n          <ion-item>\n             <ion-icon *ngIf="aluno.media < 5" class="alerta" ios="md-alert" md="md-alert" ></ion-icon> <h2>{{aluno.nome}}   </h2>\n            <h2><b>{{aluno.nome}}alkjsdfasjdf&nbsp;&nbsp;&nbsp;</b></h2>\n            <p>{{aluno.turma}}</p>\n            <ion-avatar item-end>\n                <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" class="centro"></ion-icon>\n            </ion-avatar>\n          </ion-item>\n\n        </ion-card>\n\n      </ion-item>\n\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/anthony/novopessoalProjeto/hackatonapp/src/pages/alunos/alunos.html"*/,
+            selector: 'page-alunos',template:/*ion-inline-start:"C:\Users\Admin\Documents\GitHub\hackatonapp\src\pages\alunos\alunos.html"*/'<!--\n\n\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="fundo">\n\n    <ion-title><ion-icon ios="md-people" md="md-people"></ion-icon>\n\n    &nbsp;Alunos</ion-title>  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n\n\n<ion-content padding>\n\n\n\n    <ion-searchbar\n\n    [(ngModel)]="searchTerm"\n\n    placeholder="Busque o aluno"\n\n    (search)="filterItems()"\n\n    autocomplete="on"\n\n    [debounce]="600">\n\n  </ion-searchbar>\n\n\n\n  <ion-item><br><br>\n\n -      <ion-label>Escolher turma</ion-label>\n\n -      <ion-select [(ngModel)]="gender">\n\n -        <ion-option selected>Todas turmas</ion-option>\n\n -        <ion-option *ngFor="let turma of listaDeTurmas">{{turma.turma}}</ion-option>\n\n -      </ion-select>\n\n -    </ion-item><br>\n\n\n\n    <ion-list>\n\n      <ion-item (click)="telaVisualizarDadosDoAluno(aluno)" *ngFor="let aluno of listaDeAlunos">\n\n          <ion-card>\n\n          <ion-item>\n\n             <h2><b>{{aluno.nome}}&nbsp;&nbsp;&nbsp;</b></h2>\n\n            <p>{{aluno.turma}}</p>\n\n            <ion-avatar item-end>\n\n                <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" class="centro"></ion-icon>\n\n            </ion-avatar>\n\n          </ion-item>\n\n\n\n        </ion-card>\n\n\n\n      </ion-item>\n\n\n\n    </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Admin\Documents\GitHub\hackatonapp\src\pages\alunos\alunos.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
     ], AlunosPage);
@@ -170,10 +168,10 @@ var DadosDoAlunoPage = (function () {
             "disciplina": ["Matemática", "Portugues", "Artes", "Desenho",
                 "Espanhol", "Filosofia", "Fisica", "Quimica"],
             "rendimento": [
-                { "": "1 Bimestre", "nota": 5.7 },
-                { "": "2 Bimestre", "nota": 3.2 },
-                { "": "3 Bimestre", "nota": 6.4 },
-                { "": "4 Bimestre", "nota": 3.5 }
+                { "periodo": "1 Bimestre", "nota": 5.7 },
+                { "periodo": "2 Bimestre", "nota": 3.2 },
+                { "periodo": "3 Bimestre", "nota": 6.4 },
+                { "periodo": "4 Bimestre", "nota": 3.5 }
             ]
         };
         this.disciplinas = [
@@ -205,7 +203,7 @@ var DadosDoAlunoPage = (function () {
     ;
     DadosDoAlunoPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-dados-do-aluno',template:/*ion-inline-start:"/home/anthony/novopessoalProjeto/hackatonapp/src/pages/dados-do-aluno/dados-do-aluno.html"*/'<!--\n  Generated template for the DadosDoAlunoPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="fundo">\n    <ion-title><ion-icon ios="md-persone" md="md-person"></ion-icon>\n    &nbsp;Aluno</ion-title> \n    </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <h1>{{alunoSelecionado.nome}}</h1>\n    <hr>\n    <h4>Destaque</h4>\n    <ion-card>\n      <img src="img/advance-card-map-madison.png">\n        <ion-item>\n          <ion-icon name="football" item-start large></ion-icon>\n          <h2><ion-icon class="estrela" ios="md-star" md="md-star"></ion-icon>&nbsp;Futebol</h2>\n          <p>Ótimo jogador, tem um futuro<br> brilhante.</p>\n        </ion-item>\n        <ion-item>\n          <ion-icon name="book" item-left large ></ion-icon>\n          <h2><ion-icon class="alerta" ios="md-alert" md="md-alert"></ion-icon>&nbsp;Matemática</h2>\n          <p>Ele precisa estudar mais.</p>\n        </ion-item>\n  </ion-card>\n\n  <ion-list>\n    <ion-item *ngFor="let disciplina of disciplinas; let i=index" text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">\n      <ion-card-content>\n      <h3 class="materias">\n        <ion-icon name="book" item-left large ></ion-icon>&nbsp;\n        {{info.disciplina[i]}}&nbsp;\n        <ion-icon color="success" item-right [name]="isGroupShown(i) ? \'arrow-dropdown\' : \'arrow-dropright\'"></ion-icon>\n      </h3>\n      <table *ngIf="isGroupShown(i);" cellspacing="40">\n        <tr>\n          <th>Periodo</th>\n          <th>Nota</th>\n        </tr>\n        <tr  *ngFor="let row of disciplina.table;">\n          <td style="width: 100%">{{row.periodo}}</td>\n          <td style="width: 30%">{{row.nota}}</td>\n        </tr>\n      </table>\n  </ion-card-content>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/anthony/novopessoalProjeto/hackatonapp/src/pages/dados-do-aluno/dados-do-aluno.html"*/,
+            selector: 'page-dados-do-aluno',template:/*ion-inline-start:"C:\Users\Admin\Documents\GitHub\hackatonapp\src\pages\dados-do-aluno\dados-do-aluno.html"*/'<!--\n\n  Generated template for the DadosDoAlunoPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="fundo">\n\n    <ion-title><ion-icon ios="md-persone" md="md-person"></ion-icon>\n\n    &nbsp;Aluno</ion-title> \n\n    </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <h1>{{alunoSelecionado.nome}}</h1>\n\n    <hr>\n\n    <h4>Destaque</h4>\n\n    <ion-card>\n\n      <img src="img/advance-card-map-madison.png">\n\n        <ion-item>\n\n          <ion-icon name="football" item-start large></ion-icon>\n\n          <h2><ion-icon class="estrela" ios="md-star" md="md-star"></ion-icon>&nbsp;Futebol</h2>\n\n          <p>Ótimo jogador, tem um futuro<br> brilhante.</p>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-icon name="book" item-left large ></ion-icon>\n\n          <h2><ion-icon class="alerta" ios="md-alert" md="md-alert"></ion-icon>&nbsp;Matemática</h2>\n\n          <p>Ele precisa estudar mais.</p>\n\n        </ion-item>\n\n  </ion-card>\n\n\n\n  <ion-list>\n\n    <ion-item *ngFor="let disciplina of disciplinas; let i=index" text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">\n\n      <ion-card-content>\n\n      <h3 class="materias">\n\n        <ion-icon name="book" item-left large ></ion-icon>&nbsp;\n\n        {{info.disciplina[i]}}&nbsp;\n\n        <ion-icon color="success" item-right [name]="isGroupShown(i) ? \'arrow-dropdown\' : \'arrow-dropright\'"></ion-icon>\n\n      </h3>\n\n      <table *ngIf="isGroupShown(i);" cellspacing="40">\n\n        <tr>\n\n          <th></th>\n\n          <th class="nota">Notas</th>\n\n        </tr>\n\n        <tr class="posicao" *ngFor="let row of disciplina.table;">\n\n          <td style="width: 70%">{{row.periodo}}</td>\n\n          <td style="width: 20%">{{row.nota}}</td>\n\n          <hr>\n\n        </tr>\n\n      </table>\n\n  </ion-card-content>\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Admin\Documents\GitHub\hackatonapp\src\pages\dados-do-aluno\dados-do-aluno.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
     ], DadosDoAlunoPage);
@@ -264,7 +262,7 @@ var DashboardPage = (function () {
     };
     DashboardPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-dashboard',template:/*ion-inline-start:"/home/anthony/novopessoalProjeto/hackatonapp/src/pages/dashboard/dashboard.html"*/'<!--\n  Generated template for the DashboardPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="fundo">\n    <ion-title><ion-icon ios="ios-home" md="ios-home"></ion-icon>\n    &nbsp;Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n      <h3>Minhas turmas</h3><hr>\n\n  <ion-list *ngIf="turmas!= null">\n    <ion-item *ngFor="let turma of turmas">\n      <h2 >{{turma.descricao}}</h2>\n      <ion-avatar item-end>\n      <ion-grid>\n          <ion-row>\n              <ion-col>\n                 <button ion-button right outline (click)="telaVisualizarDadosDaTurma(turma.id, \'presenca\')">Presença</button>\n              </ion-col>\n              <ion-col>\n                 <button color="danger" ion-button right outline (click)="telaVisualizarDadosDaTurma(turma.id, \'nota\')">Nota</button>\n              </ion-col>\n          </ion-row>\n      </ion-grid>\n    </ion-avatar>\n    </ion-item>\n  </ion-list>\n  <ion-list *ngIf="turmas == null">\n      <ion-item>\n        <h2>Sem turma para esse dia</h2>\n      </ion-item>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/anthony/novopessoalProjeto/hackatonapp/src/pages/dashboard/dashboard.html"*/,
+            selector: 'page-dashboard',template:/*ion-inline-start:"C:\Users\Admin\Documents\GitHub\hackatonapp\src\pages\dashboard\dashboard.html"*/'<!--\n\n  Generated template for the DashboardPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="fundo">\n\n    <ion-title><ion-icon ios="ios-home" md="ios-home"></ion-icon>\n\n    &nbsp;Home</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n      <h3>Minhas turmas</h3><hr>\n\n\n\n  <ion-list *ngIf="turmas!= null">\n\n    <ion-item *ngFor="let turma of turmas">\n\n      <h2 >{{turma.descricao}}</h2>\n\n      <ion-avatar item-end>\n\n      <ion-grid>\n\n          <ion-row>\n\n              <ion-col>\n\n                 <button ion-button right outline (click)="telaVisualizarDadosDaTurma(turma.id, \'presenca\')">Presença</button>\n\n              </ion-col>\n\n              <ion-col>\n\n                 <button color="danger" ion-button right outline (click)="telaVisualizarDadosDaTurma(turma.id, \'nota\')">Nota</button>\n\n              </ion-col>\n\n          </ion-row>\n\n      </ion-grid>\n\n    </ion-avatar>\n\n    </ion-item>\n\n  </ion-list>\n\n  <ion-list *ngIf="turmas == null">\n\n      <ion-item>\n\n        <h2>Sem turma para esse dia</h2>\n\n      </ion-item>\n\n    </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Admin\Documents\GitHub\hackatonapp\src\pages\dashboard\dashboard.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
     ], DashboardPage);
@@ -344,7 +342,7 @@ var TurmasPage = (function () {
     };
     TurmasPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-turmas',template:/*ion-inline-start:"/home/anthony/novopessoalProjeto/hackatonapp/src/pages/turmas/turmas.html"*/'<!--\n  Generated template for the TurmasPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="fundo">\n    <ion-title>{{descricao}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <h3>Lista de chamada</h3><hr>\n    <ion-list *ngIf="alunos!= null">\n        <ion-item *ngFor="let aluno of alunos; let i=$index">\n          <ion-item item-end *ngIf="type==\'presenca\'">\n               <ion-label>{{aluno.nome}}</ion-label>\n              <ion-checkbox></ion-checkbox>\n          </ion-item>\n          <ion-item item-end *ngIf="type==\'nota\'">\n                        <ion-label>{{aluno.nome}}</ion-label>\n                      <ion-label color="danger" class="nota">Nota</ion-label>\n                      <ion-input max=\'10\' min=\'0\' class="inputNota"></ion-input>\n            </ion-item>\n        </ion-item>\n      </ion-list>\n      <ion-list *ngIf="alunos == null">\n          <ion-item>\n            <h2>Sem Alunos nessa turma</h2>\n          </ion-item>\n        </ion-list>\n                <button class="centro" ion-button right outline (click) = "showAlert()">Enviar dados</button>\n</ion-content>\n'/*ion-inline-end:"/home/anthony/novopessoalProjeto/hackatonapp/src/pages/turmas/turmas.html"*/,
+            selector: 'page-turmas',template:/*ion-inline-start:"C:\Users\Admin\Documents\GitHub\hackatonapp\src\pages\turmas\turmas.html"*/'<!--\n\n  Generated template for the TurmasPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="fundo">\n\n    <ion-title>{{descricao}}</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <h3>Lista de chamada</h3><hr>\n\n    <ion-list *ngIf="alunos!= null">\n\n        <ion-item *ngFor="let aluno of alunos; let i=$index">\n\n          <ion-item item-end *ngIf="type==\'presenca\'">\n\n               <ion-label>{{aluno.nome}}</ion-label>\n\n              <ion-checkbox></ion-checkbox>\n\n          </ion-item>\n\n          <ion-item item-end *ngIf="type==\'nota\'">\n\n                        <ion-label>{{aluno.nome}}</ion-label>\n\n                      <ion-label color="danger" class="nota">Nota</ion-label>\n\n                      <ion-input max=\'10\' min=\'0\' class="inputNota"></ion-input>\n\n            </ion-item>\n\n        </ion-item>\n\n      </ion-list>\n\n      <ion-list *ngIf="alunos == null">\n\n          <ion-item>\n\n            <h2>Sem Alunos nessa turma</h2>\n\n          </ion-item>\n\n        </ion-list>\n\n                <button class="centro" ion-button right outline (click) = "showAlert()">Enviar dados</button>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Admin\Documents\GitHub\hackatonapp\src\pages\turmas\turmas.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular_index__["f" /* ModalController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
@@ -455,7 +453,7 @@ var HomePage = (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/home/anthony/novopessoalProjeto/hackatonapp/src/pages/home/home.html"*/'<ion-content padding>\n    <ion-grid text-center>\n        <ion-row>\n            <ion-col>\n                <h2></h2><br><br>\n                <img src="../assets/imgs/logo.png"><br><br><br><br>\n            </ion-col>\n        </ion-row>\n    </ion-grid>\n    <form [formGroup]="validation" (ngSubmit)="actionlogin()">\n        <ion-list>\n            <ion-item>\n              <ion-label color="primary" ><ion-icon ios="md-person" md="md-person"></ion-icon>\n&nbsp;Login: </ion-label>\n              <ion-input name="name" formControlName="login"></ion-input>\n            </ion-item>\n          \n            <ion-item>\n                <ion-label color="primary" >\n                  <ion-icon ios="md-lock" md="md-lock"></ion-icon>  &nbsp;Senha: </ion-label>\n              <ion-input name="password" formControlName="password" type="password"></ion-input>\n            </ion-item>\n          </ion-list>\n          <ion-grid text-center>\n              <ion-row>\n                  <ion-col>\n                     <button [disabled]="validation.invalid" ion-button large right block>Entrar</button>\n                  </ion-col>\n              </ion-row>\n          </ion-grid>\n    </form>\n</ion-content>'/*ion-inline-end:"/home/anthony/novopessoalProjeto/hackatonapp/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\Admin\Documents\GitHub\hackatonapp\src\pages\home\home.html"*/'<ion-content padding>\n\n    <ion-grid text-center>\n\n        <ion-row>\n\n            <ion-col>\n\n                <h2></h2><br><br>\n\n                <img src="../assets/imgs/logo.png"><br><br><br><br>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n    <form [formGroup]="validation" (ngSubmit)="actionlogin()">\n\n        <ion-list>\n\n            <ion-item>\n\n              <ion-label color="primary" ><ion-icon ios="md-person" md="md-person"></ion-icon>\n\n&nbsp;Login: </ion-label>\n\n              <ion-input name="name" formControlName="login"></ion-input>\n\n            </ion-item>\n\n          \n\n            <ion-item>\n\n                <ion-label color="primary" >\n\n                  <ion-icon ios="md-lock" md="md-lock"></ion-icon>  &nbsp;Senha: </ion-label>\n\n              <ion-input name="password" formControlName="password" type="password"></ion-input>\n\n            </ion-item>\n\n          </ion-list>\n\n          <ion-grid text-center>\n\n              <ion-row>\n\n                  <ion-col>\n\n                     <button [disabled]="validation.invalid" ion-button large right block>Entrar</button>\n\n                  </ion-col>\n\n              </ion-row>\n\n          </ion-grid>\n\n    </form>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Admin\Documents\GitHub\hackatonapp\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_requisitions_requisitions__["a" /* RequisitionsProvider */], __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormBuilder */]])
     ], HomePage);
@@ -701,7 +699,7 @@ var MyApp = (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/anthony/novopessoalProjeto/hackatonapp/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/anthony/novopessoalProjeto/hackatonapp/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\Admin\Documents\GitHub\hackatonapp\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\Users\Admin\Documents\GitHub\hackatonapp\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -738,7 +736,7 @@ var TabsPage = (function () {
         this.alunoTab = __WEBPACK_IMPORTED_MODULE_1__alunos_alunos__["a" /* AlunosPage */];
     }
     TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/anthony/novopessoalProjeto/hackatonapp/src/pages/tabs/tabs.html"*/'<ion-tabs>\n  <ion-tab [root]="homeTab" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="alunoTab" tabTitle="Alunos" tabIcon="people"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/home/anthony/novopessoalProjeto/hackatonapp/src/pages/tabs/tabs.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\Admin\Documents\GitHub\hackatonapp\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="homeTab" tabTitle="Home" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="alunoTab" tabTitle="Alunos" tabIcon="people"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"C:\Users\Admin\Documents\GitHub\hackatonapp\src\pages\tabs\tabs.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], TabsPage);

@@ -28021,10 +28021,23 @@ page-dados-do-aluno h1 {
 }
 
 page-dados-do-aluno .materias {
-  font-size: 17px;
+  font-size: 18px;
   font-family: "Times New Roman", Times, serif;
   background-color: #FFFAFA;
   text-align: left;
+}
+
+page-dados-do-aluno .posicao td {
+  margin: 0px;
+  position: relative;
+  left: 30px;
+  font-size: 15px;
+}
+
+page-dados-do-aluno .nota {
+  font-size: 17px;
+  position: relative;
+  right: 25px;
 }
 
 page-dashboard h3 {
