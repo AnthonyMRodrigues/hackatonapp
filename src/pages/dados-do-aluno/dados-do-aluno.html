@@ -21,7 +21,7 @@
         <ion-item>
           <ion-icon name="football" item-start large></ion-icon>
           <h2>Futebol</h2>
-          <p>ótimo jogador, tem um futuro brilhante nesse esporte.</p>
+          <p>Ótimo jogador, tem um futuro<br> brilhante.</p>
         </ion-item>
         <ion-item>
           <ion-icon name="book" item-left large ></ion-icon>
@@ -34,7 +34,7 @@
     <ion-item *ngFor="let disciplina of disciplinas; let i=index" text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
       <ion-card-content>
       <h3>
-        {{disciplina.title}}
+        {{info.disciplina[i]}}
         <ion-icon color="success" item-right [name]="isGroupShown(i) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
       </h3>
       <table *ngIf="isGroupShown(i);" cellspacing="40">

@@ -13,9 +13,12 @@
 </ion-header>
 
 <ion-content padding>
+
+      <h3>Minhas turmas</h3><hr>
+
   <ion-list *ngIf="turmas!= null">
     <ion-item *ngFor="let turma of turmas">
-      <h2>{{turma.descricao}} - {{turma.id}}</h2>
+      <h1>{{turma.descricao}}</h1>
       <ion-avatar item-end>
       <ion-grid>
           <ion-row>
@@ -23,7 +26,7 @@
                  <button ion-button right outline (click)="telaVisualizarDadosDaTurma(turma.id, 'presenca')">Presença</button>
               </ion-col>
               <ion-col>
-                 <button ion-button right outline (click)="telaVisualizarDadosDaTurma(turma.id, 'nota')">Nota</button>
+                 <button color="danger" ion-button right outline (click)="telaVisualizarDadosDaTurma(turma.id, 'nota')">Nota</button>
               </ion-col>
           </ion-row>
       </ion-grid>

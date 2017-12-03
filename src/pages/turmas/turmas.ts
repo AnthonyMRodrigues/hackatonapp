@@ -42,9 +42,15 @@ export class TurmasPage {
   {
 
     this.alunos = [
-      {"nome": "Maria", "nota": 1,"id": 2 },
-      {"nome": "Outro", "nota": 7,"id": 1 },
-      {"nome": "Teste", "nota": 4,"id": 3 }
+      {"nome": "Ana Claudia", "nota": 1,"id": 1 },
+      {"nome": "Barbara Ramos", "nota": 4,"id": 2 },      
+      {"nome": "Beatriz Barbosa", "nota": 7,"id": 3 },
+      {"nome": "Beto Souza", "nota": 4,"id": 4 },
+      {"nome": "Carlos Silva", "nota": 4,"id": 5 },      
+      {"nome": "Diego Gomes", "nota": 4,"id": 6 },
+      {"nome": "Eduardo Carlos", "nota": 4,"id": 7 },
+      {"nome": "Fernada Soares", "nota": 4,"id": 8 },
+      {"nome": "Nathalia Silva", "nota": 4,"id": 9 }           
     ];
      //chamar o provider e realizar a busca
   }

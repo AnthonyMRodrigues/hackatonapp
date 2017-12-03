@@ -22,7 +22,8 @@ export class DadosDoAlunoPage {
 	constructor(public navCtrl: NavController, public navParams: NavParams) {
 		this.id = navParams.get('idAluno');
 		this.info = {
-			"disciplina": "Matemática",
+			"disciplina": ["Matemática", "Portugues", "Artes", "Desenho",
+			 "Espanhol", "Filosofia", "Fisica", "Quimica"],
 			"rendimento" : [
 				{ "periodo": "2016.1", "nota": 9.7 },
 				{ "periodo": "2017.1", "nota": 7.1 },
@@ -32,6 +33,11 @@ export class DadosDoAlunoPage {
 
 		this.disciplinas = [
 		    { title: this.info.disciplina, table: this.info.rendimento },
+		    { title: this.info.disciplina, table: this.info.rendimento },
+			{ title: this.info.disciplina, table: this.info.rendimento },
+		    { title: this.info.disciplina, table: this.info.rendimento },
+		    { title: this.info.disciplina, table: this.info.rendimento },
+			{ title: this.info.disciplina, table: this.info.rendimento },
 		    { title: this.info.disciplina, table: this.info.rendimento },
 		    { title: this.info.disciplina, table: this.info.rendimento }
 		];

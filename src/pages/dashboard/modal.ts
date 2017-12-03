@@ -7,10 +7,10 @@ import { RequisitionsProvider } from '../../providers/requisitions/requisitions'
 @Component({
   template: `
 <ion-header>
-  <ion-toolbar color="fundo">
+  <ion-toolbar color="danger">
     <ion-title>
       <ion-icon ios="ios-alert-outline" md="ios-alert-outline"></ion-icon>
-    &nbsp;Observações importantes
+    &nbsp;Observações
     </ion-title>
     <ion-buttons start>
       <button ion-button (click)="dismiss()">

@@ -1,27 +1,23 @@
-<ion-header>
-  <ion-navbar color="fundo">
-    <ion-title>Prometheus</ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content padding>
     <ion-grid text-center>
         <ion-row>
             <ion-col>
-                <h2></h2>
-                <img src="../assets/imgs/logo.png">
+                <h2></h2><br><br>
+                <img src="../assets/imgs/logo.png"><br><br><br><br>
             </ion-col>
         </ion-row>
     </ion-grid>
     <form [formGroup]="validation" (ngSubmit)="actionlogin()">
         <ion-list>
             <ion-item>
-              <ion-label color="primary" floating>Login</ion-label>
+              <ion-label color="primary" ><ion-icon ios="md-person" md="md-person"></ion-icon>
+&nbsp;Login: </ion-label>
               <ion-input name="name" formControlName="login"></ion-input>
             </ion-item>
           
             <ion-item>
-                <ion-label color="primary" floating>Senha</ion-label>
+                <ion-label color="primary" >
+                  <ion-icon ios="md-lock" md="md-lock"></ion-icon>  &nbsp;Senha: </ion-label>
               <ion-input name="password" formControlName="password" type="password"></ion-input>
             </ion-item>
           </ion-list>
