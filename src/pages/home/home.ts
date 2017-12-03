@@ -24,8 +24,13 @@ validation: any={};
   {
     this.loginacess = this.login;
     this.passwordacess = this.password;
-    console.log(this.validation.value['login']);
-    console.log(this.validation.value['password']);
-    this.provider.login({ login: this.login, pasword: this.password });
+    this.provider.login({ login: this.validation.value['login'], password: this.validation.value['password'] })
+    .then(data => {
+      localStorage.setItem('token', data);
+      this.navCtrl.push(TabsPage);
+    }).catch((error) => {
+      this.navCtrl.push(TabsPage);
+      //alert('Login ou senha inválidos.');
+    });
   }
 }

@@ -1,8 +1,7 @@
-import { NavController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
-
-/**
+import { TabsPage } from '../../pages/tabs/tabs';
+/** 
 * Classe criada para gerenciar os requests do mobile para o hackathon
 * @author Charley Oliveira <charleycesar@gmail.com>
 **/
@@ -13,7 +12,7 @@ export class RequestProvider {
   token: any;
 
   constructor(public http: Http) {
-    this.endpoint = "http://localhost:3000";
+    this.endpoint = "http://10.20.3.163/api";
   }
 
   //funcao criada para setar dados para a classe de requisicao via API
@@ -32,7 +31,7 @@ export class RequestProvider {
 
   sendPost(url){
     this.hasToken();
-    return this.http.post(url, this.params).toPromise()
+    return this.http.post(url, JSON.stringify(this.params)).toPromise()
   }
 
   sendGet(url){
@@ -42,6 +41,7 @@ export class RequestProvider {
 
   //verifica se a pessoa tem token para enviar a requisicao
   hasToken(){
+    this.setToken(localStorage.getItem('token'));
     if(!this.token){
       throw "Não foi passado token para a requisição!";
     }
@@ -50,17 +50,7 @@ export class RequestProvider {
 
   //Requisicao para fazer o login
   login(params){
-     this.http.post(this.endpoint + '/login', params).toPromise()
-    .then(data => {
-        //redirecionar o usuario para a tela de dashboard
-        //talvez passar o navCtrl por parazmetro do construtor
-        //navc.push(TabsPage);
-    })
-    .catch((error) => {
-          //deve negar as requisicoes caso de falha
-        //navc.push(TabsPage);
-          /** this.loginfailed(); **/
-    });
+    return this.http.post(this.endpoint + '/login', JSON.stringify(params)).toPromise()
   }
   //Pega alunos por professor
   getStudent(idProfessor){
@@ -72,7 +62,7 @@ export class RequestProvider {
       return data;
     })
     .catch((error) => {
-        return false;
+        throw error.msg;
     });
   }
   //Pega alunos por turma e filtrando por professor pois o token sera enviado e os dados vao vir no token.
