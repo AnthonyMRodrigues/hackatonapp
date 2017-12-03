@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the DadosDoAlunoPage page.
@@ -19,7 +20,7 @@ export class DadosDoAlunoPage {
 	disciplinas: any;
 	info: any;
 
-	constructor(public navCtrl: NavController, public navParams: NavParams) {
+	constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
 		this.alunoSelecionado = navParams.get('aluno');
 		this.info = {
 			"disciplina": ["Matemática", "Portugues", "Artes", "Desenho",
@@ -29,7 +30,7 @@ export class DadosDoAlunoPage {
 				{"periodo": "2 Bimestre", "nota": 3.2 },
 				{"periodo": "3 Bimestre", "nota": 6.4 },
 				{"periodo": "4 Bimestre", "nota": 3.5 }
-				
+
 			]
 		}
 
@@ -63,5 +64,26 @@ export class DadosDoAlunoPage {
 	isGroupShown(group) {
 		return this.shownGroup === group;
 	};
+
+    createobservation()
+    {
+        let alert = this.alertCtrl.create({
+          title: 'Realizar observação',
+          inputs: [
+      {
+        name: 'observacao',
+        placeholder: 'Observação'
+      }
+    ],
+          buttons: [{
+        text: 'Cancel',
+        role: 'cancel',
+        handler: data => {
+          console.log('Cancel clicked');
+        }
+    },{text: 'Enviar'}],
+        });
+        alert.present();
+    }
 
 }

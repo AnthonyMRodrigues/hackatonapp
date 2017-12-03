@@ -8,7 +8,7 @@
 
   <ion-navbar color="fundo">
     <ion-title><ion-icon ios="md-persone" md="md-person"></ion-icon>
-    &nbsp;Aluno</ion-title> 
+    &nbsp;Aluno</ion-title>
     </ion-navbar>
 
 </ion-header>
@@ -17,18 +17,28 @@
 <ion-content padding>
     <h1>{{alunoSelecionado.nome}}</h1>
     <hr>
-    <h4>Destaque</h4>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+               <h4>Destaque</h4>
+            </ion-col>
+            <ion-col>
+               <button ion-button small (click)="createobservation()">Realizar observação</button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
     <ion-card>
       <img src="img/advance-card-map-madison.png">
         <ion-item>
           <ion-icon name="football" item-start large></ion-icon>
           <h2><ion-icon class="estrela" ios="md-star" md="md-star"></ion-icon>&nbsp;Futebol</h2>
-          <p>Ótimo jogador, tem um futuro<br> brilhante.</p>
+          <p>Ótimo jogadora, tem um futuro<br> brilhante.</p>
         </ion-item>
         <ion-item>
           <ion-icon name="book" item-left large ></ion-icon>
           <h2><ion-icon class="alerta" ios="md-alert" md="md-alert"></ion-icon>&nbsp;Matemática</h2>
-          <p>Ele precisa estudar mais.</p>
+          <p>Ela precisa estudar mais.</p>
         </ion-item>
   </ion-card>
 
