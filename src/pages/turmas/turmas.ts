@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ObservacoesImportantesPage } from './modal';
 import { AlertController } from 'ionic-angular';
 import { ModalController } from "ionic-angular/index";
 

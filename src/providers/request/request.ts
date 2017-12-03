@@ -16,9 +16,6 @@ export class RequestProvider {
   
   //funcao criada para setar dados para a classe de requisicao via API
   setParam(data){
-    if(!data){
-      let data = {};
-    }
     this.params = data;
   }
 

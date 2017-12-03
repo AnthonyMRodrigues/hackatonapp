@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { RequisitionsProvider } from '../../providers/requisitions/requisitions';
-import { ModalController } from "ionic-angular/index";
 import { TurmasPage } from '../turmas/turmas';
 
 /**
@@ -18,7 +16,6 @@ import { TurmasPage } from '../turmas/turmas';
 })
 export class DashboardPage {
 turmas: any;
-//, public requisitions: RequisitionsProvider
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.returnDataOfTurmas();
   }
